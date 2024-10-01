@@ -41,30 +41,25 @@ function playRound(humanChoice, computerChoice) {
     if (humanChoice == 'rock' && computerChoice == 'scissors') {
         humanScore++;
         console.log("You chose " + humanChoice + " which beats the computer's choice " + computerChoice + ". You win!")
-        console.log("The score is: Human " + humanScore + " - " + computerScore + " Computer");
 
         console.log("- - - - - - - - - - - - - - - - - - - - - -")
     } else if (humanChoice == 'paper' && computerChoice == 'rock') {
         humanScore++;
         console.log("You chose " + humanChoice + " which beats the computer's choice " + computerChoice + ". You win!")
-        console.log("The score is: Human " + humanScore + " - " + computerScore + " Computer");
 
         console.log("- - - - - - - - - - - - - - - - - - - - - -")
     } else if (humanChoice == 'scissors' && computerChoice == 'paper') {
         humanScore++;
         console.log("You chose " + humanChoice + " which beats the computer's choice " + computerChoice + ". You win!")
-        console.log("The score is: Human " + humanScore + " - " + computerScore + " Computer");
 
         console.log("- - - - - - - - - - - - - - - - - - - - - -")
     } else if (humanChoice ==  computerChoice) {
         console.log("You chose " + humanChoice + " which is the same as the computer's choice " + computerChoice + ". You tie!")
-        console.log("The score is: Human " + humanScore + " - " + computerScore + " Computer");
 
         console.log("- - - - - - - - - - - - - - - - - - - - - -")
     } else {
         computerScore++;
         console.log("You chose " + humanChoice + " which loses to the computer's choice " + computerChoice + ". You lose!")
-        console.log("The score is: Human " + humanScore + " - " + computerScore + " Computer");
 
         console.log("- - - - - - - - - - - - - - - - - - - - - -")
         
@@ -73,4 +68,10 @@ function playRound(humanChoice, computerChoice) {
     roundNumber++;
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+while (roundNumber < 6) {
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log("The score is: Human " + humanScore + " - " + computerScore + " Computer");
+}
+
+console.log("- - - - - - - - - - - - - - - - - - - - - -")
+console.log("The final score is: Human " + humanScore + " - " + computerScore + " Computer");
