@@ -15,4 +15,17 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanChoice = prompt("Choose rock, paper or scissors: ");
+
+    if (humanChoice === ("rock" || "paper" || "scissors")) {
+        return humanChoice;
+    }
+    else {
+        console.log("You did not choose, rock paper or scissors!")
+        getHumanChoice();
+    }
+}
+
+console.log("The computer's choice is: " + getComputerChoice());
+console.log("The user's choice is: " + getHumanChoice());
